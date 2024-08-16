@@ -8,7 +8,6 @@ UberApp is a Spring Boot-based application that simulates the functionality of a
 - [Usage](#usage)
 - [API Documentation](#api-documentation)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 - **User Management**: Secure user registration, authentication, and profile management.
