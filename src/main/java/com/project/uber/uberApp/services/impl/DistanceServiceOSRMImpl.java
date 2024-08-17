@@ -9,6 +9,12 @@ import java.awt.*;
 public class DistanceServiceOSRMImpl implements DistanceService {
     @Override
     public double calculateDistance(Point src, Point dest) {
+//TODO        Call the third party api called OSRM to fetch the distance
+        return 0;
+    }
+
+    @Override
+    public double calculateDistance(org.locationtech.jts.geom.Point pickupLocation, org.locationtech.jts.geom.Point dropOffLocation) {
         return 0;
     }
 }
