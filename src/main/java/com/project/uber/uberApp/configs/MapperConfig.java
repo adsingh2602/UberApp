@@ -8,14 +8,14 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class MapperConfig{
+public class MapperConfig {
 
     @Bean
-    public ModelMapper modelMapper(){
+    public ModelMapper modelMapper() {
         ModelMapper mapper = new ModelMapper();
 
-        mapper.typeMap(PointDto.class, Point.class).setConverter(converter -> {
-            PointDto pointDto =  converter.getSource();
+        mapper.typeMap(PointDto.class, Point.class).setConverter(context -> {
+            PointDto pointDto = context.getSource();
             return GeometryUtil.createPoint(pointDto);
         });
 
@@ -28,7 +28,8 @@ public class MapperConfig{
             return new PointDto(coordinates);
         });
 
+
         return mapper;
     }
-
 }
+

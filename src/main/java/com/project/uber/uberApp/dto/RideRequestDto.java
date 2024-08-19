@@ -1,5 +1,6 @@
 package com.project.uber.uberApp.dto;
 
+import com.project.uber.uberApp.entities.enums.PaymentMethod;
 import com.project.uber.uberApp.entities.enums.RideRequestStatus;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -16,11 +17,12 @@ public class RideRequestDto {
 
     private PointDto pickupLocation;
     private PointDto dropOffLocation;
+    private PaymentMethod paymentMethod;
+
     private LocalDateTime requestedTime;
 
     private RiderDto rider;
-
-//    private PaymentMethod paymentMethod;
+    private Double fare;
 
     private RideRequestStatus rideRequestStatus;
 }

@@ -9,16 +9,15 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
 @RequiredArgsConstructor
+@Service
 public class DriverMatchingNearestDriverStrategy implements DriverMatchingStrategy {
 
     private final DriverRepository driverRepository;
 
     @Override
     public List<Driver> findMatchingDriver(RideRequest rideRequest) {
-        return driverRepository.findMatchingDriver(rideRequest.getPickupLocation());
+        return driverRepository.findTenNearestDrivers(rideRequest.getPickupLocation());
     }
-
-
 }
+

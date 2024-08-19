@@ -39,3 +39,4 @@ public class RideRequest {
 
     private Double fare;
 }
+

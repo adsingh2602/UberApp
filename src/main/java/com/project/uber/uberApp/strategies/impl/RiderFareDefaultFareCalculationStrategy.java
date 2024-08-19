@@ -19,3 +19,4 @@ public class RiderFareDefaultFareCalculationStrategy implements RideFareCalculat
         return distance*RIDE_FARE_MULTIPLIER;
     }
 }
+
