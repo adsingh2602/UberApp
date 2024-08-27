@@ -33,4 +33,3 @@ public class Payment {
     @CreationTimestamp
     private LocalDateTime paymentTime;
 }
-
