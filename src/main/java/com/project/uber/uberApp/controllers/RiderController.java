@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/riders")
 @RequiredArgsConstructor
+//@Secured("ROLE_RIDER")
 public class RiderController {
 
     private final RiderService riderService;
@@ -42,11 +43,6 @@ public class RiderController {
         PageRequest pageRequest = PageRequest.of(pageOffset, pageSize,
                 Sort.by(Sort.Direction.DESC, "createdTime", "id"));
         return ResponseEntity.ok(riderService.getAllMyRides(pageRequest));
-    }
-
-    @PostMapping("/rateDriver/{rideId}/{rating}")
-    public ResponseEntity<DriverDto> rateDriver(@PathVariable Long rideId, @PathVariable Integer rating) {
-        return ResponseEntity.ok(riderService.rateDriver(rideId, rating));
     }
 
 }
